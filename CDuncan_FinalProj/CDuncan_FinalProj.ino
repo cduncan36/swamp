@@ -297,7 +297,7 @@ ISR(TIMER1_OVF_vect)
   // if it's not the STOP amount, increment tally thru 15 4-sec cycle loop; else reset to 0
   if(currentTicks != 65535)
   {
-    if (timerTally < 3) {
+    if (timerTally < 15) {
       timerTally += 1;
     } else {
       timerTally = 0;
